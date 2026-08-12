@@ -54,6 +54,51 @@ h1 {
   padding: 6px 14px;
   margin-bottom: 22px;
 }
+.section-label {
+  text-align: left;
+  color: #E3F42A;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+.code-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: #232227;
+  border: 1px solid #34333A;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+}
+.code-box code {
+  font-family: inherit;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #F2EEE5;
+  word-break: break-all;
+  user-select: all;
+  -webkit-user-select: all;
+}
+.copy-btn {
+  flex-shrink: 0;
+  background: transparent;
+  border: 1px solid #6E6D73;
+  color: #F2EEE5;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 9px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.copy-btn:active { transform: translateY(1px); }
 .btn {
   display: block;
   width: 100%;
@@ -82,6 +127,28 @@ h1 {
   text-decoration: none;
   user-select: all;
   -webkit-user-select: all;
+}
+.steps {
+  list-style: none;
+  counter-reset: step;
+  text-align: left;
+  color: #DAD9D9;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0 0 26px;
+}
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+}
+.steps li::before {
+  content: counter(step) ".";
+  position: absolute;
+  left: 0;
+  color: #E3F42A;
+  font-weight: 700;
 }
 .notes {
   text-align: left;
