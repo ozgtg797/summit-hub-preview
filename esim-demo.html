@@ -113,6 +113,14 @@ h1 {
   margin: 0 0 14px;
 }
 .btn:active { transform: translateY(1px); }
+.btn-row { display: flex; gap: 10px; }
+.btn-row .btn { flex: 1; margin: 0; }
+.btn-caption {
+  color: #DAD9D9;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 10px 0 22px;
+}
 .rawlink {
   display: block;
   word-break: break-all;
@@ -211,7 +219,11 @@ footer { margin-top: 34px; color: #6E6D73; font-size: 11px; letter-spacing: 0.08
 <code id="promo-code">SUMMIT-DEMO-XXXX</code>
 <button type="button" class="copy-btn" data-copy-target="promo-code">Copy code</button>
 </div>
-<a class="btn" href="https://www.bitrefill.com" rel="noreferrer noopener">Open in Bitrefill</a>
+<div class="btn-row">
+<a class="btn" href="https://apps.apple.com/app/bitrefill-esims-gift-cards/id1378102623" rel="noreferrer noopener">App Store</a>
+<a class="btn" href="https://play.google.com/store/apps/details?id=com.bitrefill.app" rel="noreferrer noopener">Google Play</a>
+</div>
+<div class="btn-caption">Redeem in the Bitrefill mobile app. Get it here, then follow the steps below.</div>
 <div class="section-label">How to redeem</div>
 <ol class="steps">
 <li>Get the Bitrefill app and create an account.</li>
@@ -223,7 +235,7 @@ footer { margin-top: 34px; color: #6E6D73; font-size: 11px; letter-spacing: 0.08
 </ol>
 <ul class="notes">
 <li>This code is yours and one-time use. Copy and save it now.</li>
-<li><a class="instr-link" href="https://bitrefill.notion.site/Bitrefill-Free-eSIM-Redemption-Instructions-3bad79ede815806a812bdc92ddf97ca3" rel="noreferrer noopener">Detailed redemption instructions with screenshots</a></li>
+<li><a class="instr-link" href="https://www.notion.so/Bitrefill-Free-eSIM-Redemption-Instructions-3bad79ede815806a812bdc92ddf97ca3" rel="noreferrer noopener">Detailed redemption instructions with screenshots</a></li>
 </ul>
 <div class="powered-row"><img src="data:image/png;base64,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" alt="" width="20" height="20">Powered by Bitrefill</div>
 <script>
